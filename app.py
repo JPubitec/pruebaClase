@@ -22,7 +22,7 @@ def formulario():
         apellido = data.get("apellido")
         conn = get_connection()
         cursor = conn.cursor()
-        query = "INSERT INTO Usuarios (nombre, apellido) VALUES (%s, %s)"
+        query = "INSERT INTO usuarios (nombre, apellido) VALUES (%s, %s)"
         cursor.execute(query, (nombre, apellido))
         conn.commit()
         cursor.close()
